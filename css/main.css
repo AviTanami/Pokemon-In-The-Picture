@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+  background-color: rgb(0, 0, 0);
+}
+
+.background-img {
+  position: absolute;
+  z-index: -2;
+  margin: 0;
+  background-color: rgb(0, 0, 0);
+}
+
+.background {
+  width: 1080px;
+}
+
+.moving-char {
+  width: 166px;
+  margin: -410px 0 0 174px;
+  position: absolute;
+}
+
+.moving-lightning {
+  width: 91px;
+  margin: -171px 0 0 748px;
+  position: absolute;
+}
+
+img.pokeball {
+  width: 150px;
+  margin: 170px 0 0 174px;
+  position: absolute;
+  /* opacity: 0.5; */
+  /* visibility: hidden; */
+  animation: shake 1.5s infinite;
+}
+
+img.bulbasaur {
+  height: 100px;
+  margin: 190px 0 0 195px;
+}
+
+.quest img {
+  width: 200px;
+  /* margin: 0px 0 0 174px; */
+  margin: 130px 0 0 160px;
+  position: absolute;
+  filter: brightness(0);
+}
+
+.reveal-img {
+  animation: reveal 2.5s;
+  /* animation: reveal 1.5s infinite; */
+}
+
+.btns .btn1 {
+  position: absolute;
+  top: 384px;
+  left: 100px;
+}
+.btns .btn2 {
+  position: absolute;
+  top: 384px;
+  left: 270px;
+}
+
+button {
+  background: white;
+  border: none;
+  color: #3975e5;
+  font-weight: 600;
+  font-size: 16px;
+  /* padding: 10px 36px; */
+  padding: 10px;
+  padding-left: 36px;
+  padding-right: 36px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px 1px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+button:hover {
+  box-shadow: 0px 4px 10px 4px;
+  background-color: #faf2cf;
+}
+
+.play-btn {
+  position: absolute;
+  top: 384px;
+  left: 195px;
+}
+
+.play-again-btn {
+  display: none;
+  position: absolute;
+  top: 384px;
+  left: 195px;
+}
+
+.reveal-bulbasaur {
+  /* animation: MoveUpDown 3s ease-in infinite; */
+  animation: MoveUpDown 2.5s ease-in infinite;
+  position: relative;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+}
+
+.hide-bulbasaur {
+  /* animation: MoveUpDown 3s ease-in infinite; */
+  animation: MoveDownUp 2s linear;
+  position: relative;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 100px;
+  }
+}
+@keyframes MoveDownUp {
+  0%,
+  100% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 100px;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(10deg);
+  }
+  95% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes reveal {
+  0% {
+    filter: brightness(0);
+  }
+  /* 50% {
+    filter: brightness(0.5); */
+  /* } */
+  100% {
+    filter: brightness(1);
+  }
+}
+
+.pause-button {
+  height: 30px;
+  width: 150px;
+  margin-top: 12px;
+  margin-left: 164px;
+}
+
+.balloon {
+  height: 120px;
+  width: 75px;
+  bottom: 0px;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgb(64, 64, 64);
+}
+
+/* .fade {
+    opacity: 0;
+    transition: opacity 0.2s linear
+    /* transition: opacity 0.2s ease-in-out */
+/* } */
+/* body {
+      /* position: relative; */
+/* background-image: url(/img/whos_that_pokemon.jpg);
+      background-repeat: no-repeat;
+      margin: 0; */
+/* background-color: rgb(0, 0, 0); */
